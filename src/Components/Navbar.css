@@ -1,0 +1,14 @@
+.header {
+  background-color: #e9c54f;
+  color: rgb(13, 7, 49);
+  font-weight: 700;
+}
+
+.icons-material {
+ text-align: end;
+ color: rgb(13, 7, 49);
+  cursor: pointer;
+}
+.container-fluid{
+  width: 10px;
+}

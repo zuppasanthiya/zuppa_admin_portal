@@ -1,0 +1,49 @@
+
+.Maintance-card-1 {
+    background-color: #ecdede;
+    box-shadow: 1px 1px orange;
+    height: 170px;
+  }
+  
+  .Maintance-card-2 {
+    background-color: #ffd6a5; 
+    height: 170px;
+  }
+  
+  .Maintance-card-3 {
+    background-color: #fdffb6; 
+    height: 170px;
+   
+  }
+  .distanceclassifi{
+    /* margin-left: -60px; */
+    margin-top: -60px;
+  }
+  .classification ul{
+    list-style-type: none;
+    margin-top: 60px;
+        margin-left: -10px;
+        color: black;
+        font-size: 16px;
+        padding: 10px;
+     
+  }
+
+  .fuelfleet{
+    margin-top: -10px;
+    color: black;
+ 
+  }
+  .Maintance-card-4 {
+    background-color: #caffbf; 
+    height: 170px;
+  }
+  
+ 
+  .card-title {
+    color: rgb(0, 0, 0); 
+    font-weight: 800;
+    font-size: 16px;
+    margin-top: -12px;
+  }
+  

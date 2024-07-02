@@ -1,0 +1,282 @@
+
+.card-page{
+  margin-left: 10px;
+height: 180px;
+}
+.card-1 {
+  background-color: #f3a1a1;
+  border-radius: 0.2rem;
+  height: 170px;
+}
+
+.card-2 {
+  background-color: #a5bdff;
+  border-radius: 0.2rem;
+  height: 170px;
+}
+
+.card-3 {
+  background-color: #90f0f3;
+  border-radius: 0.2rem;
+  height: 170px;
+}
+
+.card-4 {
+  background-color: #f3e48f;
+  border-radius: 0.2rem;
+  height: 170px;
+}
+
+.card-5 {
+  background-color: #8aa781;
+    border-radius: 0.2rem;
+    height: 170px;
+}
+
+.card-6 {
+  background-color: #a0fffa;
+  border-radius: 0.2rem;
+  height: 170px;
+}
+
+.card-title-page {
+  color: rgb(15, 13, 44);
+margin-left: -15px;
+margin-top: -5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+/*............................. speedIcon */
+.speedIcon{
+  margin-top: -25px;
+  color: rgb(255, 0, 0);
+  margin-left: 165px;
+  text-align: end;
+}
+.speedIcon-list{
+  list-style-type: none;
+  padding: 0;
+}
+
+.speedIcon-list-1{
+  font-size: 12px;
+font-weight: bold;
+ }
+.speedIcon-list-2{
+  font-size: 12px;
+font-weight: bold;
+}
+.speedIcon-list-3{
+  font-size: 31px;
+  margin-top: -10px;
+
+}
+
+.speedIcon-list-4{
+  margin-top: -10px;
+  margin-left: 100px;
+  color: black;
+}
+.speedIcon-list-5{
+  margin-left: 100px;
+  color: rgb(255, 255, 255);
+  background-color: #c0555b;
+text-align: center;
+  width: 80px;
+}
+
+/******************* FenceOverstay ********************* */
+.FenceOverstay-speedIcon{
+  margin-top: -15px;
+  color: rgb(255, 0, 0);
+  margin-left: 165px;
+  text-align: end;
+
+}
+.FenceOverstay{
+  list-style-type: none;
+  padding: 0;
+ 
+}
+.FenceOverstay-1{
+  font-size: 12px;
+font-weight: bold;
+}
+.FenceOverstay-2{
+  font-size: 12px;
+font-weight: bold;
+}
+
+.FenceOverstay-3{
+  font-size: 30px;
+  margin-top: -10px;
+
+}
+.FenceOverstay-4{
+  margin-top: -10px;
+  color: black;
+}
+.FenceOverstay-5{
+  margin-left: 100px;
+  color: rgb(255, 255, 255);
+  background-color: #5599c0;
+text-align: center;
+  width: 80px;
+} 
+
+ /*................ AC Misuse ............... */
+ .MisuseIcon{
+  margin-top: -15px;
+  color: rgb(255, 0, 0);
+  margin-left: 165px;
+  text-align: end;
+
+
+}
+.Misuse{
+  list-style-type: none;
+  padding: 0;
+ 
+}
+
+.Misuse-1{
+  margin-left: 50px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.Misuse-2{
+  margin-left: 95px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.Misuse-3{
+  font-size: 31px;
+  margin-top: -10px;
+  margin-left: 100px;
+}
+.Misuse-4{
+  margin-top: -10px;
+  margin-left: 100px;
+  color: black;
+}
+.Misuse-5{
+  margin-left: 70px;
+  color: rgb(255, 255, 255);
+  background-color: #55b4c0;
+  text-align: center;
+  width: 77px;
+} 
+
+/* ----------------------Stay away from zone */
+
+.AwayfromZone-icon{
+  margin-top: -10px;
+  color: rgb(255, 0, 0);
+  margin-left: 165px;
+  text-align: end;
+
+
+}
+.AwayfromZone{
+  list-style-type: none;
+  padding: 0;
+ 
+}
+
+
+.AwayfromZone-1{
+  font-size: 31px;
+  margin-left: 100px;
+}
+.AwayfromZone-2{
+  margin-top: -10px;
+  margin-left: 100px;
+  color: black;
+}
+.AwayfromZone-3{
+  margin-left: 72px;
+  color: rgb(255, 255, 255);
+  background-color: #c0b955;
+  text-align: center;
+  width: 77px;
+} 
+
+/* ------------- Stay In Zone ------------------ */
+
+.InZone-icon{
+  margin-top: 12px;
+  color: rgb(255, 0, 0);
+  margin-left: 165px;
+  text-align: end;
+
+
+}
+.InZone{
+  list-style-type: none;
+  padding: 0;
+ 
+}
+
+
+.InZone-1{
+  font-size: 31px;
+  margin-left: 100px;
+}
+.InZone-2{
+  margin-top: -10px;
+  margin-left: 100px;
+  color: black;
+}
+.InZone-3{
+  margin-left: 72px;
+  color: rgb(255, 255, 255);
+  background-color: #5d7a69;
+  text-align: center;
+  width: 77px;
+} 
+
+
+/* ----------------- Temperture ------------*/
+.temperature-icon {
+  margin-top: -24px;
+  color: rgb(255, 0, 0);
+  margin-left: 165px;
+  text-align: end;
+  animation: pulse 2s infinite;
+}
+
+.temperature {
+  list-style-type: none;
+  padding: 0;
+  animation: slideIn 1s ease-out;
+}
+
+.temperature-1 {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.temperature-2 {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.temperature-3 {
+  font-size: 31px;
+  margin-top: -10px;
+  margin-left: 100px;
+}
+
+.temperature-4 {
+  margin-top: -10px;
+  margin-left: 100px;
+  color: black;
+}
+
+.temperature-5 {
+  margin-left: 70px;
+  color: rgb(255, 255, 255);
+  background-color: #55bcc0;
+  text-align: center;
+  width: 77px;
+}
