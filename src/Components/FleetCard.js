@@ -95,7 +95,7 @@ const FleetCard = () => {
                     <li>Invalid</li>
                   </ul>
                 </div>
-                <div className="classification">
+                <div className="classificationOne">
                   <ul>
                     <li style={{ color: "skyblue", fontWeight: "bold" }}>
                       600 km

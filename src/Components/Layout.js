@@ -12,8 +12,7 @@ const Layout = () => {
       <Sidebar />
       <div className="flex-grow-1">
         <Navbar />
-        <Card/>
-        <FleetCard/>
+    
         <Outlet />
   
       </div>
