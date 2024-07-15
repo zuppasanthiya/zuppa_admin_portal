@@ -292,11 +292,14 @@ text-align: center;
 /* Card styles */
 .card-1, .card-2, .card-3, .card-4, .card-5, .card-6 {
   border-radius: 0.5rem;
-  height: 250px;
+  height: 230px;
   padding: 10px;
 
 }
-
+.speedmethod{
+  display: flex;
+ 
+}
 /* Individual card background colors */
 .card-1 {
   background-color: #f3a1a1;
@@ -322,14 +325,19 @@ text-align: center;
   background-color: #a0fffa;
 }
 
-/* Card title styles */
+
 .card-title-page {
   color: #0f0d2c;
   font-size: 16px;
   font-weight: 800;
-  margin-bottom: 10px;
+  margin-top: -20px;
 }
-
+.card-title-pageOne {
+  color: #0f0d2c;
+  font-size: 16px;
+  font-weight: 800;
+  margin-top: -10px;
+}
 /* List and list item styles */
 ul {
   list-style-type: none;

@@ -1,0 +1,9 @@
+.d-flex {
+    display: flex;
+  }
+  
+  .map-container {
+    flex: 1;
+    height: 100vh;
+  }
+  

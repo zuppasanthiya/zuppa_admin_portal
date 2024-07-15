@@ -1,8 +1,3 @@
-
-
-
-
-
 import * as React from "react";
 import Stack from "@mui/material/Stack";
 import LinearProgress, {
@@ -18,6 +13,7 @@ import { useDrawingArea } from "@mui/x-charts/hooks";
 import { styled } from "@mui/material/styles";
 import Card from "./Card";
 import FleetCard from "./FleetCard";
+import DataLayer from "./DataLayer/DataLayer";
 
 const data = [
   { value: 42.5, color: "#4e73df" },
@@ -139,7 +135,6 @@ const Dashboard = () => {
           </div>
         </div>
 
-        {/* Fleet Usage */}
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card border-left-warning shadow h-100">
             <div className="card-body">
@@ -150,7 +145,8 @@ const Dashboard = () => {
                     <div className="p text-gray-800 text-end">
                       Total fleet usage <b style={{ color: "blue" }}> 25800 </b>
                       <div className="p text-gray-800 text-end">
-                        Avg.Distance/Vachile <b style={{ color: "blue" }}> 129 km</b>
+                        Avg.Distance/Vachile{" "}
+                        <b style={{ color: "blue" }}> 129 km</b>
                       </div>
                     </div>
                     <LineChart
@@ -166,77 +162,103 @@ const Dashboard = () => {
           </div>
         </div>
 
-        {/* Fleet Idle and Job Information */}
         <div className="col-lg-4 col-md-6 mb-4">
-  {fleetIdle.map((idle) => (
-    <div key={idle.title}>
-      <div className={`cardfleed border-left-${idle.theme} shadow`}>
-        <div className="row no-gutters align-items-center">
-          <div className={`text-xs font-weight-bold text-${idle.theme} text-uppercase col-12`}>
-            {idle.title}
-          </div>
-          <div className="row w-100">
-            <div className="col-lg-6 col-md-6 col-6">
-              <p>Total</p>
+          {fleetIdle.map((idle) => (
+            <div key={idle.title}>
+              <div className={`cardfleed border-left-${idle.theme} shadow`}>
+                <div className="row no-gutters align-items-center">
+                  <div
+                    className={`text-xs font-weight-bold text-${idle.theme} text-uppercase col-12`}
+                  >
+                    {idle.title}
+                  </div>
+                  <div className="row w-100">
+                    <div className="col-lg-6 col-md-6 col-6">
+                      <p>Total</p>
+                    </div>
+                    <div className="col-lg-6 col-md-6 col-6">
+                      <p>Approx</p>
+                    </div>
+                    <div
+                      className="col-lg-6 col-md-6 col-6"
+                      style={{ marginTop: "-10px" }}
+                    >
+                      {idle.total}
+                      <br />
+                      <CarRepairIcon color="warning" fontSize="large" /> 32 ltr
+                    </div>
+                    <div
+                      className="col-lg-6 col-md-6 col-6 font-weight-bold"
+                      style={{ marginTop: "-10px" }}
+                    >
+                      {idle.approx}
+                      <br />
+                      <LocalGasStationIcon
+                        color="primary"
+                        fontSize="large"
+                      />{" "}
+                      85 ltr
+                    </div>
+                    <div className="col-12">
+                      <p className="mb-0">Note : {idle.note}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="col-lg-6 col-md-6 col-6">
-              <p>Approx</p>
+          ))}
+          <br />
+          {information.map((info) => (
+            <div key={info.title}>
+              <div className={`card-info border-left-${info.theme} shadow`}>
+                <div className="card-body" style={{ marginTop: "-15px" }}>
+                  <div
+                    className={`text-xs font-weight-bold text-${info.theme} text-uppercase col-12`}
+                  >
+                    {info.title}
+                  </div>
+                  <h6 style={{ textAlign: "center" }}>Total: {info.total}</h6>
+                  <Stack spacing={2} sx={{ flexGrow: 1 }}>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <span>Completed</span>
+                      <BorderLinearProgress
+                        variant="determinate"
+                        color="warning"
+                        value={50}
+                      />
+                      <span>1000</span>
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <span>Running</span>
+                      <BorderLinearProgress
+                        variant="determinate"
+                        color="success"
+                        value={40}
+                      />
+                      <span>1500</span>
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <span>Not Started</span>
+                      <BorderLinearProgress
+                        variant="determinate"
+                        color="info"
+                        value={60}
+                      />
+                      <span>500</span>
+                    </div>
+                  </Stack>
+                </div>
+              </div>
             </div>
-            <div className="col-lg-6 col-md-6 col-6" style={{ marginTop: "-10px" }}>
-              {idle.total}
-              <br />
-              <CarRepairIcon color="warning" fontSize="large" /> 32 ltr
-            </div>
-            <div className="col-lg-6 col-md-6 col-6 font-weight-bold" style={{ marginTop: "-10px" }}>
-              {idle.approx}
-              <br />
-              <LocalGasStationIcon color="primary" fontSize="large" /> 85 ltr
-            </div>
-            <div className="col-12">
-              <p className="mb-0">Note : {idle.note}</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </div>
-  ))}
-  <br />
-  {information.map((info) => (
-    <div key={info.title}>
-      <div className={`card-info border-left-${info.theme} shadow`}>
-        <div className="card-body" style={{ marginTop: "-15px" }}>
-          <div className={`text-xs font-weight-bold text-${info.theme} text-uppercase col-12`}>
-            {info.title}
-          </div>
-          <h6 style={{ textAlign: "center" }}>Total: {info.total}</h6>
-          <Stack spacing={2} sx={{ flexGrow: 1 }}>
-            <div className="d-flex justify-content-between align-items-center">
-              <span>Completed</span>
-              <BorderLinearProgress variant="determinate" color="warning" value={50} />
-              <span>1000</span>
-            </div>
-            <div className="d-flex justify-content-between align-items-center">
-              <span>Running</span>
-              <BorderLinearProgress variant="determinate" color="success" value={40} />
-              <span>1500</span>
-            </div>
-            <div className="d-flex justify-content-between align-items-center">
-              <span>Not Started</span>
-              <BorderLinearProgress variant="determinate" color="info" value={60} />
-              <span>500</span>
-            </div>
-          </Stack>
-        </div>
-      </div>
-    </div>
-  ))}
-</div>
+      <Card />
 
-      </div>
-      <Card/>
-  
-     
-      <FleetCard/>
+      <FleetCard />
+      <br/>
+      <DataLayer/>
+      <br/>
     </div>
   );
 };

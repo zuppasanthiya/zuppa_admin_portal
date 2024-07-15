@@ -97,17 +97,17 @@ const FleetCard = () => {
                 </div>
                 <div className="classificationOne">
                   <ul>
-                    <li style={{ color: "skyblue", fontWeight: "bold" }}>
+                    <li style={{ color:"blue", fontWeight: "bold" }}>
                       600 km
                     </li>
-                    <li style={{ color: "orange", fontWeight: "bold" }}>
+                    <li style={{ color:"orange", fontWeight: "bold" }}>
                       1300 km
                     </li>
-                    <li style={{ color: "darkpink", fontWeight: "bold" }}>
+                    <li style={{ color:"darkpink", fontWeight: "bold" }}>
                       {" "}
                       600 km
                     </li>
-                    <li style={{ color: "purple", fontWeight: "bold" }}>
+                    <li style={{ color:"purple", fontWeight: "bold" }}>
                       500 km
                     </li>
                   </ul>

@@ -17,12 +17,15 @@ const Card = () => {
         <div className="col-lg-2 col-md-4 col-sm-6 mb-4">
           <div className="card-1 shadow">
             <div className="card-body">
-              <h5 className="card-title-page">OverSpeed</h5>
-            
-        <div>      <SpeedIcon fontSize="large" /> </div>
               
+              <h5 className="card-title-page">OverSpeed</h5>
+              <div className="speedmethod" >      <SpeedIcon fontSize="large" /> </div>
+            
+        
               <div className="d-flex justify-content-end speedIcon">
+           
                 <ul className="speedIcon-list">
+                
                   <li className="speedIcon-list-1">Max.Speed</li>
                   <li className="speedIcon-list-2">103km/h</li>
                  <li className="speedIcon-list-3" style={{fontSize:"28px"}}>22</li>
@@ -36,8 +39,12 @@ const Card = () => {
         <div className="col-lg-2 col-md-4 col-sm-6 mb-4">
           <div className="card-2 shadow">
             <div className="card-body">
+       
               <h5 className="card-title-page">Fence Overstay</h5>
-        <div>      <FmdGoodIcon fontSize="large"/></div>
+      
+              <div className="speedmethod" ><FmdGoodIcon fontSize="large"/> </div>
+            
+       
               <div className="d-flex justify-content-end FenceOverstay-speedIcon">
                 <ul className="FenceOverstay">
                   <li className="FenceOverstay-1">Max.Overstay</li>
@@ -54,7 +61,10 @@ const Card = () => {
           <div className="card-3 shadow">
             <div className="card-body">
               <h5 className="card-title-page">AC Misuse</h5>
-              <AcUnitIcon fontSize="large"/>
+              <div className="speedmethod" >
+              <AcUnitIcon fontSize="large"/> </div>
+            
+       
               <div className="d-flex justify-content-end MisuseIcon">
                 <ul className="Misuse">
                   <li className="Misuse-1">Approx Fuel</li>
@@ -71,8 +81,9 @@ const Card = () => {
           <div className="card-4 shadow">
             <div className="card-body">
               <h5 className="card-title-page">Stay Away </h5>
-              <h5 className="card-title-page">from Zone</h5>
-              <GpsNotFixedIcon fontSize="large"/>
+              <h5 className="card-title-pageOne">from Zone</h5>
+            <div className="speedmethod" >  <GpsNotFixedIcon fontSize="large"/></div>
+            
               <div className="d-flex justify-content-end AwayfromZone-icon">
                 <ul className="AwayfromZone">
                   <li className="AwayfromZone-1" style={{fontSize:"30px",color:"red"}}>25</li>
@@ -87,7 +98,10 @@ const Card = () => {
           <div className="card-5 shadow">
             <div className="card-body">
               <h5 className="card-title-page">Stay In Zone </h5>
-              <MyLocationIcon fontSize="large"/>
+            
+              <div className="speedmethod" >        <MyLocationIcon fontSize="large"/></div>
+            
+       
               <div className="d-flex justify-content-end InZone-icon">
                 <ul className="InZone">
                   <li className="InZone-1" style={{fontSize:"30px",color:"red"}}>35</li>
@@ -102,7 +116,9 @@ const Card = () => {
           <div className="card-6 shadow">
             <div className="card-body">
               <h5 className="card-title-page">Temperature</h5>
-              <ThermostatIcon fontSize="large" />
+              <div className="speedmethod" >        <ThermostatIcon fontSize="large" /></div>
+            
+           
               <div className="d-flex justify-content-end temperature-icon">
                 <ul className="temperature">
                   <li className="temperature-1">Min Temp. 13° C</li> 
