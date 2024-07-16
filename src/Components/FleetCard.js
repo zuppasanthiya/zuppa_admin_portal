@@ -37,7 +37,7 @@ const FleetCard = () => {
         <div className="col-lg-2">
           <div className=" Maintance-card-1">
             <div className="card-body">
-              <p className="card-title">Maintenance Reminder</p>
+              <p className="card-title text-start">Maintenance Reminder</p>
 
               <div className="d-flex justify-content-around">
                 <div>
@@ -59,7 +59,7 @@ const FleetCard = () => {
         <div className="col-lg-2">
           <div className="Maintance-card-2">
             <div className="card-body">
-              <h5 className="card-title">Renewal Reminder</h5>
+              <h5 className="card-title text-start">Renewal Reminder</h5>
               <div className="d-flex justify-content-around">
                 <div>
                   <CalendarMonthIcon fontSize="large" color="primary" />
@@ -80,7 +80,7 @@ const FleetCard = () => {
         <div className="col-lg-4">
           <div className="Maintance-card-3">
             <div className="card-body">
-              <h5 className="card-title">Distance Classification</h5>
+              <h5 className="card-title text-start">Distance Classification</h5>
 
               <div className="d-flex justify-content-around distanceclassifi">
                 <PieChart series={[{ data, innerRadius: 40 }]} {...size}>
@@ -121,7 +121,7 @@ const FleetCard = () => {
         <div className="col-lg-4">
           <div className="Maintance-card-4">
             <div className="card-body">
-              <h5 className="card-title">Fleet Fuel</h5>
+              <h5 className="card-title text-start">Fleet Fuel</h5>
               <div className="d-flex justify-content-around fuelfleet">
                 <div>
                   <p>Total</p>

@@ -85,7 +85,7 @@ const Dashboard = () => {
             <div className="card-body">
               <div className="row no-gutters">
                 <div className="col mr-2">
-                  <div className="text-xs text-success text-uppercase mb-2">
+                  <div className="text-xs text-success text-uppercase mb-2 text-start">
                     Fleet Status
                   </div>
                   <div className="d-flex">
@@ -140,7 +140,7 @@ const Dashboard = () => {
             <div className="card-body">
               <div className="row no-gutters align-items-center">
                 <div className="col mr-2">
-                  <div className="text-xs font-weight-bold text-info text-uppercase mb-1">
+                  <div className="text-xs font-weight-bold text-info text-uppercase mb-1 text-start">
                     Fleet usage
                     <div className="p text-gray-800 text-end">
                       Total fleet usage <b style={{ color: "blue" }}> 25800 </b>
@@ -213,7 +213,7 @@ const Dashboard = () => {
               <div className={`card-info border-left-${info.theme} shadow`}>
                 <div className="card-body" style={{ marginTop: "-15px" }}>
                   <div
-                    className={`text-xs font-weight-bold text-${info.theme} text-uppercase col-12`}
+                    className={`text-xs font-weight-bold text-${info.theme} text-uppercase col-12 text-start`}
                   >
                     {info.title}
                   </div>
@@ -257,7 +257,7 @@ const Dashboard = () => {
 
       <FleetCard />
       <br/>
-      <DataLayer/>
+      {/* <DataLayer/> */}
       <br/>
     </div>
   );

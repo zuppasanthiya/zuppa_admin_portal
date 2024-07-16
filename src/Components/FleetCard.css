@@ -176,7 +176,7 @@ li {
 
 
   font-size: 16px;
-  padding: 10px;
+  padding: 4.5px;
 }
 .fuelfleet {
   margin-top: -10px;
@@ -189,8 +189,8 @@ li {
 }
 
 .card-title {
-  color: rgb(0, 0, 0); 
-  font-weight: 800;
+  color: rgb(34, 3, 3); 
+  font-weight: 700;
   font-size: 16px;
   margin-top: -12px;
 }

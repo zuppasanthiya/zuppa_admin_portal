@@ -4,6 +4,7 @@ import Layout from './Components/Layout';
 import './css/sb-admin-2.min.css';
 import Card from './Components/Card';
 import MapDevice from './Components/MapDevice/MapDevice';
+import Stock from './Components/StockManagement/Stock';
 
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}/>
          <Route path='/mapdevice' element={<MapDevice/>} />
-       
+         <Route path='/stock' element={<Stock/>} />
       </Routes>
     </Router>
   );

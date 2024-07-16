@@ -47,7 +47,7 @@ const Sidebar = () => {
         </p>
        
 
-        <Link to="/hardware">
+        <Link to="/stock">
         <p>
           <HardwareIcon />
         </p>

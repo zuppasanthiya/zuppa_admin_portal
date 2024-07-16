@@ -17,9 +17,10 @@ const Navbar = () => {
         </div>
       </header>
       <br />
+   
       <br />
       <br />
-      <Dashboard />
+
     </div>
   );
 }

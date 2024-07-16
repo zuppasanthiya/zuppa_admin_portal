@@ -1,33 +1,24 @@
 .sidebar-map {
-    display: flex;
-    flex-direction: column;
-    width: 90px;
-    background-color: #040531;
-    padding: 20px;
-    height: 200vh;
-    border-right: 1px solid #d88200;
-    align-items: center;
-    color:#d88200;
-  }
-  
-  .sidebar-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
-  }
-  
- 
-  
-  .sidebar-item:hover {
-    background-color: #12063d;
-    cursor: pointer;
-    border-radius: 5px;
-    padding: 5px;
-    align-items: center;
-  }
-  .sidebar-itemImage{
-    height: 40px;
-    width: 43px;
-    background-color: #f88705;
-    border-radius: 20px;
-  }
+  display: flex;
+  flex-direction: column;
+  width: 90px;
+  background-color: #040531;
+  padding: 20px;
+  height: 200vh;
+  border-right: 1px solid #d88200;
+  align-items: center;
+  color: #d88200;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.sidebar-itemImage {
+  height: 40px;
+  width: 43px;
+  background-color: #f88705;
+  border-radius: 20px;
+}
