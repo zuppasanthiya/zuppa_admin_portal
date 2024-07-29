@@ -27,7 +27,7 @@ const Register = () => {
     }),
     onSubmit: async (values, { setSubmitting, setFieldError }) => {
       try {
-        const response = await axios.post(`http://localhost:4000/register`, values);
+        const response = await axios.post(`https://adminportal-backend.vercel.app/register`, values);
 
         if (response.data.message === "Register Successfully") {
           alert(response.data.message);
