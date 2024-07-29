@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await axios.post("http://localhost:4000/login", {
+      const response = await axios.post("https://zuppa-admin-portal.vercel.app/login", {
         email,
         password,
       });
