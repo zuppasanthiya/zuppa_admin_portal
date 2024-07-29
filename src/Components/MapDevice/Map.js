@@ -12,61 +12,64 @@ import "leaflet/dist/leaflet.css";
 import "leaflet.gridlayer.googlemutant";
 import L from "leaflet";
 import droneIconUrl from "../../Assets/unnamed.gif";
+import "./Map.css"
+
+
 
 const { BaseLayer } = LayersControl;
 
 const chennaiLocations = [
-  { lat: 13.0827, lng: 80.2707, name: "Chennai 1" },
-  { lat: 13.0675, lng: 80.2376, name: "Chennai 2" },
-  { lat: 13.0352, lng: 80.2465, name: "Chennai 3" },
-  { lat: 13.0475, lng: 80.1997, name: "Chennai 4" },
-  { lat: 13.064, lng: 80.2478, name: "Chennai 5" },
-  { lat: 13.0825, lng: 80.27, name: "Chennai 6" },
-  { lat: 13.0524, lng: 80.2503, name: "Chennai 7" },
-  { lat: 13.0301, lng: 80.2097, name: "Chennai 8" },
-  { lat: 13.0638, lng: 80.2205, name: "Chennai 9" },
-  { lat: 13.0833, lng: 80.2622, name: "Chennai 10" },
+  { lat: 13.0827, lng: 80.2707, name: "Drone 1",battery:"20%"},
+  { lat: 13.0675, lng: 80.2376, name: "Drone 2",battery:"30%" },
+  { lat: 13.0352, lng: 80.2465, name: "Drone 3" ,battery:"60%" },
+  { lat: 13.0475, lng: 80.1997, name: "Drone 4" ,battery:"20%" },
+  { lat: 13.064, lng: 80.2478, name: "Drone 5"  ,battery:"77%"},
+  { lat: 13.0825, lng: 80.27, name: "Drone 6" ,battery:"60%"},
+  { lat: 13.0524, lng: 80.2503, name: "Drone 7"  ,battery:"10%"},
+  { lat: 13.0301, lng: 80.2097, name: "Drone 8"  ,battery:"100%"},
+  { lat: 13.0638, lng: 80.2205, name: "Drone 9",battery:"60%" },
+  { lat: 13.0833, lng: 80.2622, name: "Drone 10" ,battery:"30%" },
 ];
 
 const maduraiLocations = [
-  { lat: 9.9252, lng: 78.1198, name: "Madurai 1" },
-  { lat: 9.9307, lng: 78.1221, name: "Madurai 2" },
-  { lat: 9.9398, lng: 78.1212, name: "Madurai 3" },
-  { lat: 9.9407, lng: 78.1217, name: "Madurai 4" },
-  { lat: 9.9261, lng: 78.1155, name: "Madurai 5" },
+  { lat: 9.9252, lng: 78.1198, name: "Drone 1"  ,battery:"50%"},
+  { lat: 9.9307, lng: 78.1221, name: "Drone 2"  ,battery:"30%"},
+  { lat: 9.9398, lng: 78.1212, name: "Drone 3",battery:"60%" },
+  { lat: 9.9407, lng: 78.1217, name: "Drone 4"  ,battery:"70%"},
+  { lat: 9.9261, lng: 78.1155, name: "Drone 5"  ,battery:"40%"},
 ];
 
 const keralaLocations = [
-  { lat: 8.5241, lng: 76.9366, name: "Kerala 1" },
-  { lat: 8.5581, lng: 76.8815, name: "Kerala 2" },
-  { lat: 8.505, lng: 76.9561, name: "Kerala 3" },
-  { lat: 9.9312, lng: 76.2673, name: "Kerala 4" },
-  { lat: 9.964, lng: 76.2416, name: "Kerala 5" },
-  { lat: 10.0889, lng: 76.356, name: "Kerala 6" },
-  { lat: 11.2588, lng: 75.7804, name: "Kerala 7" },
-  { lat: 11.2437, lng: 75.8173, name: "Kerala 8" },
-  { lat: 11.0987, lng: 76.074, name: "Kerala 9" },
-  { lat: 10.8505, lng: 76.2711, name: "Kerala 10" },
-  { lat: 8.8897, lng: 76.6141, name: "Kerala 11" },
-  { lat: 9.8243, lng: 76.6362, name: "Kerala 12" },
-  { lat: 8.9751, lng: 76.5111, name: "Kerala 13" },
-  { lat: 10.5276, lng: 76.2144, name: "Kerala 14" },
-  { lat: 10.5276, lng: 76.2144, name: "Kerala 15" },
-  { lat: 10.7712, lng: 76.354, name: "Kerala 16" },
-  { lat: 9.3835, lng: 76.5741, name: "Kerala 17" },
-  { lat: 9.5612, lng: 76.5204, name: "Kerala 18" },
-  { lat: 8.8897, lng: 76.6311, name: "Kerala 19" },
-  { lat: 8.8911, lng: 76.6156, name: "Kerala 20" },
-  { lat: 10.1831, lng: 76.3573, name: "Kerala 21" },
-  { lat: 10.1831, lng: 76.3573, name: "Kerala 22" },
-  { lat: 8.5736, lng: 76.8598, name: "Kerala 23" },
-  { lat: 8.5736, lng: 76.8598, name: "Kerala 24" },
-  { lat: 10.5276, lng: 76.2144, name: "Kerala 25" },
-  { lat: 11.2588, lng: 75.7804, name: "Kerala 26" },
-  { lat: 11.2437, lng: 75.8173, name: "Kerala 27" },
-  { lat: 10.8505, lng: 76.2711, name: "Kerala 28" },
-  { lat: 10.0889, lng: 76.356, name: "Kerala 29" },
-  { lat: 9.9312, lng: 76.2673, name: "Kerala 30" },
+  { lat: 8.5241, lng: 76.9366, name: "Drone 1"  ,battery:"30%"},
+  { lat: 8.5581, lng: 76.8815, name: "Drone 2" ,battery:"60%"},
+  { lat: 8.505, lng: 76.9561, name: "Drone 3"  ,battery:"50%"},
+  { lat: 9.9312, lng: 76.2673, name: "Drone 4" ,battery:"65%" },
+  { lat: 9.964, lng: 76.2416, name: "Drone 5"  ,battery:"35%"},
+  { lat: 10.0889, lng: 76.356, name: "Drone 6" ,battery:"60%"},
+  { lat: 11.2588, lng: 75.7804, name: "Drone 7"  ,battery:"80%"},
+  { lat: 11.2437, lng: 75.8173, name: "Drone 8"  ,battery:"30%"},
+  { lat: 11.0987, lng: 76.074, name: "Drone 9"  ,battery:"40%"},
+  { lat: 10.8505, lng: 76.2711, name: "Drone 10"  ,battery:"30%"},
+  { lat: 8.8897, lng: 76.6141, name: "Drone 11"  ,battery:"30%"},
+  { lat: 9.8243, lng: 76.6362, name: "Drone 12" ,battery:"65%"},
+  { lat: 8.9751, lng: 76.5111, name: "Drone 13" ,battery:"20%"},
+  { lat: 10.5276, lng: 76.2144, name: "Drone 14" ,battery:"80%"},
+  { lat: 10.5276, lng: 76.2144, name: "Drone 15" ,battery:"60%"},
+  { lat: 10.7712, lng: 76.354, name: "Drone 16" ,battery:"20%"},
+  { lat: 9.3835, lng: 76.5741, name: "Drone 17",battery:"90%" },
+  { lat: 9.5612, lng: 76.5204, name: "Drone 18" ,battery:"28%"},
+  { lat: 8.8897, lng: 76.6311, name: "Drone 19" ,battery:"60%"},
+  { lat: 8.8911, lng: 76.6156, name: "Drone 20"  ,battery:"30%"},
+  { lat: 10.1831, lng: 76.3573, name: "Drone 21",battery:"60%" },
+  { lat: 10.1831, lng: 76.3573, name: "Drone 22",battery:"20%" },
+  { lat: 8.5736, lng: 76.8598, name: "Drone 23",battery:"40%" },
+  { lat: 8.5736, lng: 76.8598, name: "Drone 24" ,battery:"65%"},
+  { lat: 10.5276, lng: 76.2144, name: "Drone 25" ,battery:"30%"},
+  { lat: 11.2588, lng: 75.7804, name: "Drone 26" ,battery:"20%"},
+  { lat: 11.2437, lng: 75.8173, name: "Drone 27",battery:"70%" },
+  { lat: 10.8505, lng: 76.2711, name: "Drone 28" ,battery:"10%"},
+  { lat: 10.0889, lng: 76.356, name: "Drone 29",battery:"6%" },
+  { lat: 9.9312, lng: 76.2673, name: "Drone 30",battery:"60%" },
 ];
 
 const allLocations = [
@@ -115,17 +118,18 @@ const Map = () => {
   };
 
   const droneIcon = new L.Icon({
-    iconUrl:droneIconUrl,
+    iconUrl: droneIconUrl,
     iconSize: [100, 70],
   });
 
   return (
     <div style={{ height: "100vh", width: "100%" }}>
+         
       <MapContainer
         center={[0, 0]}
         zoom={1}
         style={{ height: "100%", width: "100%" }}
-      >
+      >    
         <LayersControl position="topright">
           <BaseLayer checked name="Google Roadmap">
             <TileLayer url="https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}" />
@@ -133,6 +137,7 @@ const Map = () => {
           <BaseLayer name="Google Hybrid">
             <TileLayer url="https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}" />
           </BaseLayer>
+       
         </LayersControl>
         <MapComponent />
         <ZoomHandler
@@ -145,18 +150,26 @@ const Map = () => {
               ? droneIcon
               : new L.DivIcon({
                   className: "custom-div-icon",
-                  html: `<div style="background-color:rgb(3, 49, 177);color:white; border: 1px solid blue; border-radius: 50%; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center;">${
+                  html: `<div style="background-color:blue; font-weight: bold; color:white; font-size:16px; border: 1px solid skyblue; border-radius: 50%; width: 40px; height: 45px; display: flex; justify-content: center; align-items: center;">${
                     location.name.split(" ")[1]
                   }</div>`,
                 });
-
+        
           return (
             <Marker
               key={index}
               position={[location.lat, location.lng]}
               icon={customIcon}
             >
-              <Popup>{location.name}</Popup>
+              <Popup>
+              <b>  Drone No</b> : {location.name}
+                <br />
+               <b> Latitude</b> : {location.lat}
+                <br />
+             <b>   Longitude </b>: {location.lng}
+             <br/>
+             <b>Battery level</b> : {location.battery}
+              </Popup>
             </Marker>
           );
         })}
@@ -165,3 +178,5 @@ const Map = () => {
   );
 };
 export default Map;
+
+

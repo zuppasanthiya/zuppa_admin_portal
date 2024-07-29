@@ -6,4 +6,8 @@
     flex: 1;
     height: 100vh;
   }
-  
+  .toggledraw{
+    background-color: rgb(3, 13, 59);
+    color: rgb(226, 43, 43);
+  }
+ 

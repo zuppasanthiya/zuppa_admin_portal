@@ -1,0 +1,32 @@
+.popup {
+    display: none; 
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50; 
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    z-index: 1000;
+    animation: fadeInOut 3s;
+  }
+  
+  .popup.show {
+    display: block; 
+    animation: fadeInOut 3s, shake 0.5s;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(-50%) translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-50%) translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(-50%) translateX(10px); }
+  }
+  

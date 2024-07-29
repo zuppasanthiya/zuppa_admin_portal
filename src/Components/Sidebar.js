@@ -7,7 +7,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import EventNoteIcon from "@mui/icons-material/EventNote";
 import DonutSmallIcon from "@mui/icons-material/DonutSmall";
 import SettingsIcon from "@mui/icons-material/Settings";
-import HardwareIcon from '@mui/icons-material/Hardware';
+import HardwareIcon from "@mui/icons-material/Hardware";
 
 import { Link } from "react-router-dom";
 
@@ -22,12 +22,16 @@ const Sidebar = () => {
       <br />
       <br />
       <div className="paragraph-icon">
-        <p>
-          <PersonIcon color="success" fontSize="large" />
-        </p>
-        <p>
+        <Link to="/login">
+          <p>
+            <PersonIcon color="success" fontSize="large" />
+          </p>
+        </Link>
+       <Link to="/teamlist">
+       <p>
           <NotificationsActiveIcon />
         </p>
+       </Link>
         <p>
           <SpeedIcon />
         </p>
@@ -45,13 +49,10 @@ const Sidebar = () => {
         <p>
           <SettingsIcon />
         </p>
-       
 
-        <Link to="/stock">
         <p>
           <HardwareIcon />
         </p>
-        </Link>
       </div>
     </div>
   );

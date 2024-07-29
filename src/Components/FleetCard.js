@@ -43,7 +43,7 @@ const FleetCard = () => {
                 <div>
                   <CalendarMonthIcon fontSize="large" color="primary" />
                   <h6>Due</h6>
-                  <h2 style={{ color: "skyblue" }}>32</h2>
+                  <h2 style={{ color: "green" }}>32</h2>
                 </div>
                 <div>
                   <TungstenIcon fontSize="large" color="warning" />
@@ -64,7 +64,7 @@ const FleetCard = () => {
                 <div>
                   <CalendarMonthIcon fontSize="large" color="primary" />
                   <h6>Due</h6>
-                  <h2 style={{ color: "skyblue" }}>32</h2>
+                  <h2 style={{ color: "green" }}>32</h2>
                 </div>
                 <div>
                   <TungstenIcon fontSize="large" color="warning" />
@@ -91,7 +91,7 @@ const FleetCard = () => {
                   <ul>
                     <li>Business</li>
                     <li>Personal</li>
-                    <li>Unclassified </li>
+                    <li>Unclassified</li>
                     <li>Invalid</li>
                   </ul>
                 </div>
@@ -100,7 +100,7 @@ const FleetCard = () => {
                     <li style={{ color:"blue", fontWeight: "bold" }}>
                       600 km
                     </li>
-                    <li style={{ color:"orange", fontWeight: "bold" }}>
+                    <li style={{ color:"orange", fontWeight: "bold",marginLeft:"-4px" }}>
                       1300 km
                     </li>
                     <li style={{ color:"darkpink", fontWeight: "bold" }}>

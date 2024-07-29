@@ -1,0 +1,28 @@
+.Dronesidebar {
+  background-color: #080333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  width: 60px; 
+  z-index: 1000;
+  margin-left: 6.5px;
+  overflow: hidden; 
+}
+
+.Dronesidebar .text-primary {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .Dronesidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: none;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

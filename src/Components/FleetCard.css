@@ -1,63 +1,9 @@
-/* 
-.Maintance-card-1 {
-    background-color: #ecdede;
-    box-shadow: 1px 1px orange;
-    height: 170px;
-  }
-  
-  .Maintance-card-2 {
-    background-color: #ffd6a5; 
-    height: 170px;
-  }
-  
-  .Maintance-card-3 {
-    background-color: #fdffb6; 
-    height: 170px;
-   
-  }
-  .distanceclassifi{
-
-    margin-top: -60px;
-  }
-  .classification ul{
-    list-style-type: none;
-    margin-top: 60px;
-        margin-left: -10px;
-        color: black;
-        font-size: 16px;
-        padding: 10px;
-     
-  }
-
-  .fuelfleet{
-    margin-top: -10px;
-    color: black;
- 
-  }
-  .Maintance-card-4 {
-    background-color: #caffbf; 
-    height: 170px;
-  }
-  
- 
-  .card-title {
-    color: rgb(0, 0, 0); 
-    font-weight: 800;
-    font-size: 16px;
-    margin-top: -12px;
-  }
-   */
-
-
-   /* FleetCard.css */
-
-/* Card page container */
 
 
 /* Card styles */
 .Maintance-card-1, .Maintance-card-2, .Maintance-card-3, .Maintance-card-4 {
   border-radius: 0.5rem;
-  /* padding: 10px; */
+
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
@@ -144,7 +90,7 @@ li {
 
 /* Background colors for cards */
 .Maintance-card-1 {
-  background-color: #ecdede;
+  background-color: #f79e9e;
   height: 170px;
 }
 
@@ -165,18 +111,17 @@ li {
 .classification  {
   list-style-type: none;
   margin-top: 60px;
-  margin-left: -50px;
+  margin-left: -60px;
   color: black;
   font-size: 16px;
   padding: 10px;
 }
 .classificationOne  {
   list-style-type: none;
-  margin-top: 60px;
-
-
+  margin-top: 66px;
   font-size: 16px;
-  padding: 4.5px;
+  padding: 4.2px;
+
 }
 .fuelfleet {
   margin-top: -10px;

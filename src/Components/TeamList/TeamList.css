@@ -1,0 +1,92 @@
+.TeamList {
+    padding: 20px;
+    color: rgb(77, 0, 0);
+    font-weight: 800;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .TeamList-filter-input {
+    margin-bottom: 20px;
+    width: 30%;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .TeamList-table-container {
+    animation: popUp 1.5s ease-in-out;
+  }
+  
+  .table-row {
+    transition: background-color 0.2s ease;
+  
+  }
+  
+  .table-row:hover {
+    background-color: rgba(196, 193, 62, 0.2);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes popUp {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  h3 {
+    color: #130b00;
+    font-weight: bold;
+  }
+  
+  .filter-input .MuiInputBase-root {
+ 
+    border-radius: 5px;
+  }
+  
+  .MuiTableCell-head {
+    background-color: #cc7c14;
+ 
+  }
+  
+  .MuiTableCell-body {
+    background-color: rgb(255, 246, 246);
+
+}
+  
+  .MuiTableCell-body:hover {
+    background-color: rgba(255, 136, 0, 0.3);
+  }
+  
+  
+  /* Responsive design for TeamList */
+@media (max-width: 768px) {
+  .TeamList-filter-input {
+    width: 100% !important;
+  }
+
+  .TeamList-table-container {
+    overflow-x: auto;
+  }
+}

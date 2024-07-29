@@ -1,13 +1,13 @@
 .sidebar-map {
   display: flex;
   flex-direction: column;
-  width: 90px;
+  width: 70px;
   background-color: #040531;
   padding: 20px;
-  height: 200vh;
-  border-right: 1px solid #d88200;
+  height: 100vh;
+  border-right: 1px solid #d85600;
   align-items: center;
-  color: #d88200;
+  cursor: pointer;
 }
 
 .sidebar-item {
@@ -19,6 +19,11 @@
 .sidebar-itemImage {
   height: 40px;
   width: 43px;
-  background-color: #f88705;
+  background-color: #d85600;
   border-radius: 20px;
+}
+.drawerbutton {
+  background-color: rgb(252, 243, 243);
+  color: rgb(4, 3, 53);
+  font-weight: bold;
 }

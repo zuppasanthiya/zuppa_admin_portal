@@ -3,9 +3,7 @@ import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 import { Outlet } from "react-router-dom";
 import "./Layout.css";
-import Card from "./Card";
-import FleetCard from "./FleetCard";
-import Dashboard from "./Dashboard";
+import Dashboard from "./Dashboard/Dashboard";
 
 const Layout = () => {
   return (
@@ -13,7 +11,8 @@ const Layout = () => {
       <Sidebar />
       <div className="flex-grow-1">
         <Navbar />
-        <Dashboard />
+      
+
         <Outlet />
   
       </div>
