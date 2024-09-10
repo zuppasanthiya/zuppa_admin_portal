@@ -1,0 +1,29 @@
+.createlist-mainpage {
+  position: relative;
+  overflow: hidden;
+}
+
+.create-list-container {
+  padding: 20px;
+  margin-top: 20px;
+}
+.create-image {
+  height: 50px;
+}
+.create-list-title {
+  text-align: center;
+  padding: 20px;
+  color: green;
+  font-weight: bold;
+}
+
+.create-list-form .MuiTextField-root {
+  margin-bottom: 15px;
+}
+
+.create-list-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+

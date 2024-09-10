@@ -10,11 +10,17 @@ import {
   Paper,
   TextField,
   TableSortLabel,
+  Typography,
 
 } from "@mui/material";
 import "./DroneList.css";
 import TeamList from "../TeamList/TeamList";
 import DroneSidebar from "./DroneSidebar";
+import dronePage from "../../Assets/unnamed.gif"
+
+
+
+
 
 const createData = (
   sn,
@@ -111,7 +117,14 @@ const DroneList = () => {
     <>
       <DroneSidebar />
       <div className="DroneList container ">
-        <h3 className="text-center">Drone List</h3>
+
+      <Typography variant="h4" className="text-center headertag">
+      Drone List
+      
+      </Typography>
+
+    
+
         <div className="row justify-content-center">
           <div className="col-md-6">
             <TextField

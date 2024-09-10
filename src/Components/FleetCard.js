@@ -31,6 +31,12 @@ function PieCenterLabel({ children }) {
 }
 
 const FleetCard = () => {
+
+
+
+
+
+  
   return (
     <div className="card-page">
       <div className="row">

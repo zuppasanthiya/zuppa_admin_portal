@@ -10,6 +10,16 @@ import { AuthProvider } from './Components/TeamList/AuthContext';
 import TeamList from './Components/TeamList/TeamList';
 import EditList from './Components/TeamList/EditList';
 import Onprogress from './Components/PagenotFound/Onprogress';
+import CreateList from './Components/TeamList/CreateTeamList/CreateList';
+import ReactGA from "react-ga4"
+
+
+
+
+
+const TRACKING_ID ="G-RE54PB12WJ";
+ReactGA.initialize(TRACKING_ID);
+
 
 const App = () => {
   return (
@@ -22,7 +32,9 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/dronelist" element={<DroneList />} />
           <Route path="/teamlist" element={<TeamList />} />
+          <Route path="/createlist" element={<CreateList />} />
           <Route path="/editlist/:sn" element={<EditList />} />
+          
           <Route  path="/progress" element={<Onprogress />} />
         </Routes>
       </Router>

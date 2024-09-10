@@ -1,25 +1,28 @@
+
+
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
 import axios from 'axios';
-import './EditList.css';
+import { toast, ToastContainer } from 'react-toastify';  
+import 'react-toastify/dist/ReactToastify.css';  
 
 const EditList = () => {
   const { state } = useLocation();
-  const {  id, Team, EmployeeName, SalaryMonthly, Role, RevenueGenerated, Efficiency, Drone } = state || {};
+  const { id, team, employeeName, salaryMonthly, role, revenueGenerated, efficiency, drone } = state || {};
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     id,
-    Team,
-    EmployeeName,
-    SalaryMonthly,
-    Role,
-    RevenueGenerated,
-    Efficiency,
-    Drone,
+    team,
+    employeeName,
+    salaryMonthly,
+    role,
+    revenueGenerated,
+    efficiency,
+    drone,
   });
 
   const handleChange = (e) => {
@@ -31,13 +34,15 @@ const EditList = () => {
     e.preventDefault();
     axios.put(`https://65f13bf1da8c6584131d2154.mockapi.io/zuppa/users/${formData.id}`, formData)
       .then(() => {
-        navigate('/teamlist');
+        toast.success('Edit successful!');  
+        setTimeout(() => navigate('/teamlist'), 2000);  
       })
-      .catch((error) => console.error('Error updating data:', error));
+      .catch((error) => {
+        toast.error('Error updating data.');  
+        console.error('Error updating data:', error);
+      });
   };
-const teamlistpage =()=>{
-  navigate("/teamlist")
-}
+
   return (
     <div className='container'>
       <br />
@@ -53,21 +58,23 @@ const teamlistpage =()=>{
       >
         <TextField id="id" label="S.no" variant="standard" value={formData.id} onChange={handleChange} disabled />
         <br />
-        <TextField id="Team" label="Team" variant="standard" value={formData.Team} onChange={handleChange} />
+        <TextField id="team" label="Team" variant="standard" value={formData.team} onChange={handleChange} />
         <br />
-        <TextField id="EmployeeName" label="Employee Name" variant="standard" value={formData.EmployeeName} onChange={handleChange} />
+        <TextField id="employeeName" label="Employee Name" variant="standard" value={formData.employeeName} onChange={handleChange} />
         <br />
-        <TextField id="SalaryMonthly" label="Salary Monthly" variant="standard" value={formData.SalaryMonthly} onChange={handleChange} />
+        <TextField id="salaryMonthly" label="Salary Monthly" variant="standard" value={formData.salaryMonthly} onChange={handleChange} />
         <br />
-        <TextField id="Role" label="Role" variant="standard" value={formData.Role} onChange={handleChange} />
+        <TextField id="role" label="Role" variant="standard" value={formData.role} onChange={handleChange} />
         <br />
-        <TextField id="RevenueGenerated" label="Revenue Generated" variant="standard" value={formData.RevenueGenerated} onChange={handleChange} />
+        <TextField id="revenueGenerated" label="Revenue Generated" variant="standard" value={formData.revenueGenerated} onChange={handleChange} />
         <br />
-        <TextField id="Efficiency" label="Efficiency(%)" variant="standard" value={formData.Efficiency} onChange={handleChange} />
+        <TextField id="efficiency" label="Efficiency(%)" variant="standard" value={formData.efficiency} onChange={handleChange} />
         <br />
-        <TextField id="Drone" label="Drone" variant="standard" value={formData.Drone} onChange={handleChange} />
-        <Button variant='contained' type="submit" onClick={teamlistpage}>Submit</Button>
+        <TextField id="drone" label="Drone" variant="standard" value={formData.drone} onChange={handleChange} />
+        <Button variant='contained' type="submit">Submit</Button>
+        {/* <Button variant='contained' onClick={() => navigate('/teamlist')}>Back</Button> */}
       </Box>
+      <ToastContainer />  
     </div>
   );
 };

@@ -8,7 +8,9 @@
 .DroneList-table-container {
   animation: popUp 1.5s ease-in-out;
 }
-
+.drone-image{
+  height: 50px;
+}
 .DroneList-filter-input {
   margin-bottom: 20px;
   width: 30%;

@@ -1,10 +1,13 @@
 .TeamList {
     padding: 20px;
-    color: rgb(77, 0, 0);
+    color: rgb(97, 0, 0);
     font-weight: 800;
     animation: fadeIn 1s ease-in-out;
   }
-  
+ 
+  .team-image{
+    height: 90px;
+  }
   .TeamList-filter-input {
     margin-bottom: 20px;
     width: 30%;
@@ -89,4 +92,22 @@
   .TeamList-table-container {
     overflow-x: auto;
   }
+}
+
+
+
+
+
+
+
+.headertag {
+  color: red;
+  font-weight: bold;
+  animation: colorFade 3s infinite;
+}
+
+@keyframes colorFade {
+  0% { color: red; }
+  50% { color: blue; }
+  100% { color: red; }
 }
