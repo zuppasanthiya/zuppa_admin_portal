@@ -12,7 +12,7 @@ import EditList from './Components/TeamList/EditList';
 import Onprogress from './Components/PagenotFound/Onprogress';
 import CreateList from './Components/TeamList/CreateTeamList/CreateList';
 import ReactGA from "react-ga4"
-
+import { Helmet } from 'react-helmet';
 
 
 
@@ -23,7 +23,19 @@ ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
   return (
-    <AuthProvider>
+<div>
+<Helmet>
+        <title>Zuppa Tech | Drone Seller Company</title>
+        <meta
+          name="description"
+          content="Shop the latest drone technology at Zuppa. Discover advanced drones for every purpose, from photography to surveillance. Visit shop.zuppa.io."
+        />
+        <meta
+          name="keywords"
+          content="drones, drone seller, advanced drones, Zuppa, drone technology"
+        />
+      </Helmet>
+<AuthProvider>
       <Router>
         <Routes>
           <Route path="/" element={<Layout />} />
@@ -39,6 +51,7 @@ const App = () => {
         </Routes>
       </Router>
     </AuthProvider>
+</div>
   );
 };
 
